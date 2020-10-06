@@ -27,6 +27,10 @@ class WriteupRequestMiddleware
                 $data['header'] = $this->getSupportedHeaderFrom($request);
             }
 
+            if (config('writeup.request_log.size')) {
+                $data['size'] = strlen($request->getContent());
+            }
+
             if (config()) {
                 $data['data'] = $request->all();
             }

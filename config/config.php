@@ -27,7 +27,8 @@ return [
         ],
         'url' => true,
         'method' => true,
-        'params' => true
+        'params' => true,
+        'size' => true,
     ],
     'response_log' => [
         'enable' => env('WRITEUP_RESPONSE_LOG', true),
